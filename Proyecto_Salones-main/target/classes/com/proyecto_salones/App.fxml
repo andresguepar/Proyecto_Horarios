@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<DialogPane prefHeight="499.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto_salones.Controller">
+   <content>
+      <BorderPane prefHeight="405.0" prefWidth="843.0">
+         <center>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="823.0">
+               <children>
+                  <Pane layoutY="-19.0" prefHeight="375.0" prefWidth="293.0">
+                     <children>
+                        <Region blendMode="MULTIPLY" layoutX="-1.0" layoutY="263.0" opacity="0.75" prefHeight="37.0" prefWidth="277.0" style="-fx-background-color: #C9E7DD;" />
+                        <Region blendMode="MULTIPLY" layoutX="-1.0" layoutY="33.0" opacity="0.75" prefHeight="37.0" prefWidth="277.0" style="-fx-background-color: #C9E7DD;" />
+                        <Region blendMode="MULTIPLY" layoutX="-1.0" layoutY="79.0" opacity="0.75" prefHeight="37.0" prefWidth="277.0" style="-fx-background-color: #C9E7DD;" />
+                        <Region blendMode="MULTIPLY" layoutX="-1.0" layoutY="125.0" opacity="0.75" prefHeight="37.0" prefWidth="277.0" style="-fx-background-color: #C9E7DD;" />
+                        <Region blendMode="MULTIPLY" layoutX="-1.0" layoutY="168.0" opacity="0.75" prefHeight="38.0" prefWidth="277.0" style="-fx-background-color: #C9E7DD;" />
+                        <Region blendMode="MULTIPLY" layoutX="-1.0" layoutY="215.0" opacity="0.75" prefHeight="37.0" prefWidth="277.0" style="-fx-background-color: #C9E7DD;" />
+                        <Region blendMode="MULTIPLY" layoutX="-1.0" layoutY="310.0" opacity="0.75" prefHeight="40.0" prefWidth="277.0" style="-fx-background-color: #C9E7DD;" />
+                        <Label fx:id="name" layoutX="17.0" layoutY="39.0" text="Nombre">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label fx:id="asig" layoutX="17.0" layoutY="85.0" text="Asignatura">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label fx:id="salon" layoutX="17.0" layoutY="176.0" text="Salon">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label fx:id="sede" layoutX="17.0" layoutY="131.0" text="Sede">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <TextField id="txtName" fx:id="txtName" layoutX="116.0" layoutY="39.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></TextField>
+                        <TextField fx:id="txtAsig" layoutX="116.0" layoutY="85.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></TextField>
+                        <Label fx:id="fecha" layoutX="17.0" layoutY="221.0" text="Fecha">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label fx:id="hora" layoutX="17.0" layoutY="269.0" text="Hora">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label fx:id="semestre" layoutX="17.0" layoutY="319.0" text="Semestre">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <DatePicker fx:id="txtFecha" layoutX="116.0" layoutY="221.0" prefHeight="25.0" prefWidth="149.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></DatePicker>
+                        <ComboBox fx:id="txtHora" layoutX="115.0" layoutY="269.0" prefWidth="150.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <ComboBox fx:id="txtSede" layoutX="116.0" layoutY="131.0" prefWidth="150.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <ComboBox fx:id="txtSalon" layoutX="115.0" layoutY="176.0" prefWidth="150.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></ComboBox>
+                        <ComboBox fx:id="txtSemestre" layoutX="116.0" layoutY="319.0" prefWidth="150.0" />
+                     </children>
+                  </Pane>
+                  <TableView fx:id="table" layoutX="293.0" layoutY="-11.0" prefHeight="407.0" prefWidth="511.0">
+                     <columns>
+                        <TableColumn fx:id="tbId" prefWidth="24.0" text="Id" />
+                        <TableColumn fx:id="tbProfesor" prefWidth="85.0" text="Profesor" />
+                        <TableColumn fx:id="tbSemestre" prefWidth="61.39996337890625" text="Semestre" />
+                        <TableColumn fx:id="tbAsig" prefWidth="80.99993896484375" text="Asignatura" />
+                        <TableColumn fx:id="tbSede" prefWidth="75.0" text="Sede" />
+                        <TableColumn fx:id="tbSalon" prefWidth="55.0" text="Salon" />
+                        <TableColumn fx:id="tbHora" minWidth="0.0" prefWidth="56.0" text="Hora" />
+                        <TableColumn fx:id="tbFecha" maxWidth="186.0" prefWidth="73.0" text="Fecha" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btSave" layoutX="182.0" layoutY="364.0" mnemonicParsing="false" onAction="#save" prefHeight="36.0" prefWidth="84.0" text="Guardar" />
+                  <Button fx:id="btEdit" accessibleText="Cancelar" cancelButton="true" layoutX="26.0" layoutY="364.0" mnemonicParsing="false" onAction="#edit" prefHeight="36.0" prefWidth="84.0" text="Cancelar" textFill="#ef6362" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </content>
+   <header>
+      <Pane prefHeight="97.0" prefWidth="843.0">
+         <children>
+            <Rectangle arcHeight="2.0" arcWidth="5.0" fill="#213556" height="72.0" stroke="WHITE" strokeDashOffset="66.0" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="843.0">
+               <effect>
+                  <DropShadow height="112.24" radius="27.56" width="0.0" />
+               </effect>
+            </Rectangle>
+            <ImageView fitHeight="46.0" fitWidth="59.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../img/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="91.0" layoutY="21.0" prefHeight="31.0" prefWidth="281.0" text="CLASSROOM OFFICER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Arial Black" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </header>
+</DialogPane>
